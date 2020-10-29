@@ -1,3 +1,5 @@
 class Note < ActiveRecord::Base
-  # add associations here
+  belongs_to :song
+  has_one :genre, through: :song
+  has_one :artist, through: :song
 end
